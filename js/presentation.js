@@ -21,6 +21,7 @@ importAll(() => {
 		]
 	});
 	Reveal.configure({ slideNumber: 'c/t' });
+	loadSketches();
 });
 
 let isInFullscreen = false;
