@@ -38,6 +38,7 @@ const post = putFuncs([
 
 let sketches = [];
 function loadSketches() {
+  console.log("loadSketches");
   let elements = document.getElementsByTagName("sketch");
   while (elements.length != 0) {
     let element = elements[0];
