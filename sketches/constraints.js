@@ -94,12 +94,15 @@ function redrawAll() {
 }
 
 function showConstraints() {
+  let parent = _.createDiv();
   for (let constraint of constraints) {
-    let checkbox = _.createCheckbox(constraint.t, constraint.a);
+    let checkbox = _.createCheckbox("`"+constraint.t+"`", constraint.a);
     checkbox.changed((e) => {
       constraint.a = e.target.checked;
       redrawAll();
     });
+    checkbox.style("font-size:0.7em; display:inline-block");
+    parent.child(checkbox);
   }
 }
 
